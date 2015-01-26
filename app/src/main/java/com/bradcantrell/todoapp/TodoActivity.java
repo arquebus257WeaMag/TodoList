@@ -32,10 +32,10 @@ public class TodoActivity extends ActionBarActivity {
         readItems();
         todoAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1, todoItems);
         lvItems.setAdapter(todoAdapter);
-        setupListViewListener();
+        setupListViewListeners();
     }
 
-    private void setupListViewListener() {
+    private void setupListViewListeners() {
         lvItems.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapter, View item, int pos, long id) {
@@ -45,6 +45,10 @@ public class TodoActivity extends ActionBarActivity {
                 return true;
             }
         });
+
+        lvItems.setOnItemClickListener(onIt) {
+
+        };
     }
 
 
